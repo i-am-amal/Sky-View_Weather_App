@@ -19,32 +19,44 @@ mixin _$HomeScreenEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() fetchHomeDataEvent,
+    required TResult Function() changeVisibility,
+    required TResult Function(String locationName) searchLocation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fetchHomeDataEvent,
+    TResult? Function()? changeVisibility,
+    TResult? Function(String locationName)? searchLocation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fetchHomeDataEvent,
+    TResult Function()? changeVisibility,
+    TResult Function(String locationName)? searchLocation,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(FetchHomeDataEvent value) fetchHomeDataEvent,
+    required TResult Function(ChangeVisibility value) changeVisibility,
+    required TResult Function(SearchLocation value) searchLocation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(FetchHomeDataEvent value)? fetchHomeDataEvent,
+    TResult? Function(ChangeVisibility value)? changeVisibility,
+    TResult? Function(SearchLocation value)? searchLocation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FetchHomeDataEvent value)? fetchHomeDataEvent,
+    TResult Function(ChangeVisibility value)? changeVisibility,
+    TResult Function(SearchLocation value)? searchLocation,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -107,6 +119,8 @@ class _$FetchHomeDataEvent implements FetchHomeDataEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() fetchHomeDataEvent,
+    required TResult Function() changeVisibility,
+    required TResult Function(String locationName) searchLocation,
   }) {
     return fetchHomeDataEvent();
   }
@@ -115,6 +129,8 @@ class _$FetchHomeDataEvent implements FetchHomeDataEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fetchHomeDataEvent,
+    TResult? Function()? changeVisibility,
+    TResult? Function(String locationName)? searchLocation,
   }) {
     return fetchHomeDataEvent?.call();
   }
@@ -123,6 +139,8 @@ class _$FetchHomeDataEvent implements FetchHomeDataEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fetchHomeDataEvent,
+    TResult Function()? changeVisibility,
+    TResult Function(String locationName)? searchLocation,
     required TResult orElse(),
   }) {
     if (fetchHomeDataEvent != null) {
@@ -135,6 +153,8 @@ class _$FetchHomeDataEvent implements FetchHomeDataEvent {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(FetchHomeDataEvent value) fetchHomeDataEvent,
+    required TResult Function(ChangeVisibility value) changeVisibility,
+    required TResult Function(SearchLocation value) searchLocation,
   }) {
     return fetchHomeDataEvent(this);
   }
@@ -143,6 +163,8 @@ class _$FetchHomeDataEvent implements FetchHomeDataEvent {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(FetchHomeDataEvent value)? fetchHomeDataEvent,
+    TResult? Function(ChangeVisibility value)? changeVisibility,
+    TResult? Function(SearchLocation value)? searchLocation,
   }) {
     return fetchHomeDataEvent?.call(this);
   }
@@ -151,6 +173,8 @@ class _$FetchHomeDataEvent implements FetchHomeDataEvent {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FetchHomeDataEvent value)? fetchHomeDataEvent,
+    TResult Function(ChangeVisibility value)? changeVisibility,
+    TResult Function(SearchLocation value)? searchLocation,
     required TResult orElse(),
   }) {
     if (fetchHomeDataEvent != null) {
@@ -165,6 +189,255 @@ abstract class FetchHomeDataEvent implements HomeScreenEvent {
 }
 
 /// @nodoc
+abstract class _$$ChangeVisibilityCopyWith<$Res> {
+  factory _$$ChangeVisibilityCopyWith(
+          _$ChangeVisibility value, $Res Function(_$ChangeVisibility) then) =
+      __$$ChangeVisibilityCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ChangeVisibilityCopyWithImpl<$Res>
+    extends _$HomeScreenEventCopyWithImpl<$Res, _$ChangeVisibility>
+    implements _$$ChangeVisibilityCopyWith<$Res> {
+  __$$ChangeVisibilityCopyWithImpl(
+      _$ChangeVisibility _value, $Res Function(_$ChangeVisibility) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ChangeVisibility implements ChangeVisibility {
+  const _$ChangeVisibility();
+
+  @override
+  String toString() {
+    return 'HomeScreenEvent.changeVisibility()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$ChangeVisibility);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() fetchHomeDataEvent,
+    required TResult Function() changeVisibility,
+    required TResult Function(String locationName) searchLocation,
+  }) {
+    return changeVisibility();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchHomeDataEvent,
+    TResult? Function()? changeVisibility,
+    TResult? Function(String locationName)? searchLocation,
+  }) {
+    return changeVisibility?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchHomeDataEvent,
+    TResult Function()? changeVisibility,
+    TResult Function(String locationName)? searchLocation,
+    required TResult orElse(),
+  }) {
+    if (changeVisibility != null) {
+      return changeVisibility();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(FetchHomeDataEvent value) fetchHomeDataEvent,
+    required TResult Function(ChangeVisibility value) changeVisibility,
+    required TResult Function(SearchLocation value) searchLocation,
+  }) {
+    return changeVisibility(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(FetchHomeDataEvent value)? fetchHomeDataEvent,
+    TResult? Function(ChangeVisibility value)? changeVisibility,
+    TResult? Function(SearchLocation value)? searchLocation,
+  }) {
+    return changeVisibility?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(FetchHomeDataEvent value)? fetchHomeDataEvent,
+    TResult Function(ChangeVisibility value)? changeVisibility,
+    TResult Function(SearchLocation value)? searchLocation,
+    required TResult orElse(),
+  }) {
+    if (changeVisibility != null) {
+      return changeVisibility(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ChangeVisibility implements HomeScreenEvent {
+  const factory ChangeVisibility() = _$ChangeVisibility;
+}
+
+/// @nodoc
+abstract class _$$SearchLocationCopyWith<$Res> {
+  factory _$$SearchLocationCopyWith(
+          _$SearchLocation value, $Res Function(_$SearchLocation) then) =
+      __$$SearchLocationCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String locationName});
+}
+
+/// @nodoc
+class __$$SearchLocationCopyWithImpl<$Res>
+    extends _$HomeScreenEventCopyWithImpl<$Res, _$SearchLocation>
+    implements _$$SearchLocationCopyWith<$Res> {
+  __$$SearchLocationCopyWithImpl(
+      _$SearchLocation _value, $Res Function(_$SearchLocation) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? locationName = null,
+  }) {
+    return _then(_$SearchLocation(
+      locationName: null == locationName
+          ? _value.locationName
+          : locationName // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SearchLocation implements SearchLocation {
+  const _$SearchLocation({required this.locationName});
+
+  @override
+  final String locationName;
+
+  @override
+  String toString() {
+    return 'HomeScreenEvent.searchLocation(locationName: $locationName)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SearchLocation &&
+            (identical(other.locationName, locationName) ||
+                other.locationName == locationName));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, locationName);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SearchLocationCopyWith<_$SearchLocation> get copyWith =>
+      __$$SearchLocationCopyWithImpl<_$SearchLocation>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() fetchHomeDataEvent,
+    required TResult Function() changeVisibility,
+    required TResult Function(String locationName) searchLocation,
+  }) {
+    return searchLocation(locationName);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchHomeDataEvent,
+    TResult? Function()? changeVisibility,
+    TResult? Function(String locationName)? searchLocation,
+  }) {
+    return searchLocation?.call(locationName);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchHomeDataEvent,
+    TResult Function()? changeVisibility,
+    TResult Function(String locationName)? searchLocation,
+    required TResult orElse(),
+  }) {
+    if (searchLocation != null) {
+      return searchLocation(locationName);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(FetchHomeDataEvent value) fetchHomeDataEvent,
+    required TResult Function(ChangeVisibility value) changeVisibility,
+    required TResult Function(SearchLocation value) searchLocation,
+  }) {
+    return searchLocation(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(FetchHomeDataEvent value)? fetchHomeDataEvent,
+    TResult? Function(ChangeVisibility value)? changeVisibility,
+    TResult? Function(SearchLocation value)? searchLocation,
+  }) {
+    return searchLocation?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(FetchHomeDataEvent value)? fetchHomeDataEvent,
+    TResult Function(ChangeVisibility value)? changeVisibility,
+    TResult Function(SearchLocation value)? searchLocation,
+    required TResult orElse(),
+  }) {
+    if (searchLocation != null) {
+      return searchLocation(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SearchLocation implements HomeScreenEvent {
+  const factory SearchLocation({required final String locationName}) =
+      _$SearchLocation;
+
+  String get locationName;
+  @JsonKey(ignore: true)
+  _$$SearchLocationCopyWith<_$SearchLocation> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$HomeScreenState {
   String? get weather => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
@@ -175,6 +448,7 @@ mixin _$HomeScreenState {
   int? get pressure => throw _privateConstructorUsedError;
   double? get maxTemp => throw _privateConstructorUsedError;
   String? get errorMsg => throw _privateConstructorUsedError;
+  bool get searchVisibility => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
@@ -186,7 +460,8 @@ mixin _$HomeScreenState {
             int? visibility,
             int? pressure,
             double? maxTemp,
-            String? errorMsg)
+            String? errorMsg,
+            bool searchVisibility)
         initial,
   }) =>
       throw _privateConstructorUsedError;
@@ -201,7 +476,8 @@ mixin _$HomeScreenState {
             int? visibility,
             int? pressure,
             double? maxTemp,
-            String? errorMsg)?
+            String? errorMsg,
+            bool searchVisibility)?
         initial,
   }) =>
       throw _privateConstructorUsedError;
@@ -216,7 +492,8 @@ mixin _$HomeScreenState {
             int? visibility,
             int? pressure,
             double? maxTemp,
-            String? errorMsg)?
+            String? errorMsg,
+            bool searchVisibility)?
         initial,
     required TResult orElse(),
   }) =>
@@ -258,7 +535,8 @@ abstract class $HomeScreenStateCopyWith<$Res> {
       int? visibility,
       int? pressure,
       double? maxTemp,
-      String? errorMsg});
+      String? errorMsg,
+      bool searchVisibility});
 }
 
 /// @nodoc
@@ -283,6 +561,7 @@ class _$HomeScreenStateCopyWithImpl<$Res, $Val extends HomeScreenState>
     Object? pressure = freezed,
     Object? maxTemp = freezed,
     Object? errorMsg = freezed,
+    Object? searchVisibility = null,
   }) {
     return _then(_value.copyWith(
       weather: freezed == weather
@@ -321,6 +600,10 @@ class _$HomeScreenStateCopyWithImpl<$Res, $Val extends HomeScreenState>
           ? _value.errorMsg
           : errorMsg // ignore: cast_nullable_to_non_nullable
               as String?,
+      searchVisibility: null == searchVisibility
+          ? _value.searchVisibility
+          : searchVisibility // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -342,7 +625,8 @@ abstract class _$$_InitialCopyWith<$Res>
       int? visibility,
       int? pressure,
       double? maxTemp,
-      String? errorMsg});
+      String? errorMsg,
+      bool searchVisibility});
 }
 
 /// @nodoc
@@ -364,6 +648,7 @@ class __$$_InitialCopyWithImpl<$Res>
     Object? pressure = freezed,
     Object? maxTemp = freezed,
     Object? errorMsg = freezed,
+    Object? searchVisibility = null,
   }) {
     return _then(_$_Initial(
       weather: freezed == weather
@@ -402,6 +687,10 @@ class __$$_InitialCopyWithImpl<$Res>
           ? _value.errorMsg
           : errorMsg // ignore: cast_nullable_to_non_nullable
               as String?,
+      searchVisibility: null == searchVisibility
+          ? _value.searchVisibility
+          : searchVisibility // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -418,7 +707,8 @@ class _$_Initial implements _Initial {
       this.visibility,
       this.pressure,
       this.maxTemp,
-      this.errorMsg});
+      this.errorMsg,
+      required this.searchVisibility});
 
   @override
   final String? weather;
@@ -438,10 +728,12 @@ class _$_Initial implements _Initial {
   final double? maxTemp;
   @override
   final String? errorMsg;
+  @override
+  final bool searchVisibility;
 
   @override
   String toString() {
-    return 'HomeScreenState.initial(weather: $weather, name: $name, temp: $temp, feelsLike: $feelsLike, humidity: $humidity, visibility: $visibility, pressure: $pressure, maxTemp: $maxTemp, errorMsg: $errorMsg)';
+    return 'HomeScreenState.initial(weather: $weather, name: $name, temp: $temp, feelsLike: $feelsLike, humidity: $humidity, visibility: $visibility, pressure: $pressure, maxTemp: $maxTemp, errorMsg: $errorMsg, searchVisibility: $searchVisibility)';
   }
 
   @override
@@ -462,12 +754,14 @@ class _$_Initial implements _Initial {
                 other.pressure == pressure) &&
             (identical(other.maxTemp, maxTemp) || other.maxTemp == maxTemp) &&
             (identical(other.errorMsg, errorMsg) ||
-                other.errorMsg == errorMsg));
+                other.errorMsg == errorMsg) &&
+            (identical(other.searchVisibility, searchVisibility) ||
+                other.searchVisibility == searchVisibility));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, weather, name, temp, feelsLike,
-      humidity, visibility, pressure, maxTemp, errorMsg);
+      humidity, visibility, pressure, maxTemp, errorMsg, searchVisibility);
 
   @JsonKey(ignore: true)
   @override
@@ -487,11 +781,12 @@ class _$_Initial implements _Initial {
             int? visibility,
             int? pressure,
             double? maxTemp,
-            String? errorMsg)
+            String? errorMsg,
+            bool searchVisibility)
         initial,
   }) {
     return initial(weather, name, temp, feelsLike, humidity, visibility,
-        pressure, maxTemp, errorMsg);
+        pressure, maxTemp, errorMsg, searchVisibility);
   }
 
   @override
@@ -506,11 +801,12 @@ class _$_Initial implements _Initial {
             int? visibility,
             int? pressure,
             double? maxTemp,
-            String? errorMsg)?
+            String? errorMsg,
+            bool searchVisibility)?
         initial,
   }) {
     return initial?.call(weather, name, temp, feelsLike, humidity, visibility,
-        pressure, maxTemp, errorMsg);
+        pressure, maxTemp, errorMsg, searchVisibility);
   }
 
   @override
@@ -525,13 +821,14 @@ class _$_Initial implements _Initial {
             int? visibility,
             int? pressure,
             double? maxTemp,
-            String? errorMsg)?
+            String? errorMsg,
+            bool searchVisibility)?
         initial,
     required TResult orElse(),
   }) {
     if (initial != null) {
       return initial(weather, name, temp, feelsLike, humidity, visibility,
-          pressure, maxTemp, errorMsg);
+          pressure, maxTemp, errorMsg, searchVisibility);
     }
     return orElse();
   }
@@ -575,7 +872,8 @@ abstract class _Initial implements HomeScreenState {
       final int? visibility,
       final int? pressure,
       final double? maxTemp,
-      final String? errorMsg}) = _$_Initial;
+      final String? errorMsg,
+      required final bool searchVisibility}) = _$_Initial;
 
   @override
   String? get weather;
@@ -595,6 +893,8 @@ abstract class _Initial implements HomeScreenState {
   double? get maxTemp;
   @override
   String? get errorMsg;
+  @override
+  bool get searchVisibility;
   @override
   @JsonKey(ignore: true)
   _$$_InitialCopyWith<_$_Initial> get copyWith =>

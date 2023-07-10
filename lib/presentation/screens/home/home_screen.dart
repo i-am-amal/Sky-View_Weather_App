@@ -16,7 +16,6 @@ class HomeScreen extends StatelessWidget {
     BlocProvider.of<HomeScreenBloc>(context)
         .add(const HomeScreenEvent.fetchHomeDataEvent());
 
-    bool searchVisibility = false;
     TextEditingController searchTextController = TextEditingController();
 
     return Scaffold(
@@ -47,49 +46,59 @@ class HomeScreen extends StatelessWidget {
                               color: Colors.white, fontSize: 35),
                         ),
                         onTap: () {
-                          // setState(() {
-                          searchVisibility = true;
-                          // });
+                          BlocProvider.of<HomeScreenBloc>(context)
+                              .add(const HomeScreenEvent.changeVisibility());
                         },
                       ),
                       const SizedBox(height: 20),
 
-                      Visibility(
-                        visible: searchVisibility,
-                        child: TextFormField(
-                          controller: searchTextController,
-                          style: const TextStyle(color: Colors.white),
-                          decoration: InputDecoration(
-                              suffixIcon: Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  IconButton(
-                                      onPressed: () {
-                                        // findGeoLoc(searchTextController.text);
-                                      },
-                                      icon: const Icon(
-                                        Icons.search,
-                                        color: Colors.white,
-                                      )),
-                                  IconButton(
-                                      onPressed: () {
-                                        searchTextController.clear();
-                                        // setState(() {
-                                        // searchVisibility = false;
-                                        // }
+                      BlocBuilder<HomeScreenBloc, HomeScreenState>(
+                        builder: (context, state) {
+                          return Visibility(
+                            visible: state.searchVisibility,
+                            child: TextFormField(
+                              controller: searchTextController,
+                              style: const TextStyle(color: Colors.white),
+                              decoration: InputDecoration(
+                                  suffixIcon: Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      IconButton(
+                                          onPressed: () {
+                                            BlocProvider.of<HomeScreenBloc>(
+                                                    context)
+                                                .add(HomeScreenEvent
+                                                    .searchLocation(
+                                                        locationName:
+                                                            searchTextController
+                                                                .text));
+                                          },
+                                          icon: const Icon(
+                                            Icons.search,
+                                            color: Colors.white,
+                                          )),
+                                      IconButton(
+                                          onPressed: () {
+                                            searchTextController.clear();
+                                            // setState(() {
+                                            // searchVisibility = false;
+                                            // }
 
-                                        // );
-                                      },
-                                      icon: const Icon(
-                                        Icons.clear,
-                                        color: Colors.white,
-                                      )),
-                                ],
-                              ),
-                              hintText: 'Search',
-                              hintStyle: const TextStyle(color: Colors.white)),
-                        ),
+                                            // );
+                                          },
+                                          icon: const Icon(
+                                            Icons.clear,
+                                            color: Colors.white,
+                                          )),
+                                    ],
+                                  ),
+                                  hintText: 'Search',
+                                  hintStyle:
+                                      const TextStyle(color: Colors.white)),
+                            ),
+                          );
+                        },
                       ),
 
                       //////
@@ -99,9 +108,6 @@ class HomeScreen extends StatelessWidget {
                           Text(
                             state.temp.toString(),
 
-                            // widget.weatherObj?.main?.temp?.toStringAsFixed(0) == null
-                            //     ? '--'
-                            //     : widget.weatherObj!.main!.temp!.toStringAsFixed(0),
 
                             style: const TextStyle(
                                 color: Colors.white, fontSize: 70),

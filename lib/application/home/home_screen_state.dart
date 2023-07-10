@@ -12,6 +12,6 @@ class HomeScreenState with _$HomeScreenState {
     int? pressure,
     double? maxTemp,
     String? errorMsg,
-
+    required bool searchVisibility,
   }) = _Initial;
 }
