@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sky_view_weather_app/application/home/home_screen_bloc.dart';
 import 'package:sky_view_weather_app/application/splash_screen/splash_screen_bloc.dart';
-import 'package:sky_view_weather_app/presentation/screens/home/home_screen.dart';
 import 'package:sky_view_weather_app/presentation/screens/splash/splash_screen.dart';
 
 void main() {
@@ -30,6 +29,7 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.grey,
           ),
           home: const SplashScreen(),
-        ));
+        ),
+        );
   }
 }

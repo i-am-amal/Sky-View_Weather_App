@@ -3,7 +3,6 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sky_view_weather_app/application/home/home_screen_bloc.dart';
-
 import '../../../core/constants/constants.dart';
 import '../../widgets/custom_text.dart';
 import '../../widgets/date_functions.dart';
@@ -68,11 +67,12 @@ class HomeScreen extends StatelessWidget {
                                           onPressed: () {
                                             BlocProvider.of<HomeScreenBloc>(
                                                     context)
-                                                .add(HomeScreenEvent
-                                                    .searchLocation(
-                                                        locationName:
-                                                            searchTextController
-                                                                .text));
+                                                .add(
+                                              HomeScreenEvent.searchLocation(
+                                                  locationName:
+                                                      searchTextController
+                                                          .text),
+                                            );
                                           },
                                           icon: const Icon(
                                             Icons.search,
@@ -81,6 +81,7 @@ class HomeScreen extends StatelessWidget {
                                       IconButton(
                                           onPressed: () {
                                             searchTextController.clear();
+
                                             // setState(() {
                                             // searchVisibility = false;
                                             // }
@@ -107,8 +108,6 @@ class HomeScreen extends StatelessWidget {
                         children: [
                           Text(
                             state.temp.toString(),
-
-
                             style: const TextStyle(
                                 color: Colors.white, fontSize: 70),
                           ),
@@ -124,9 +123,6 @@ class HomeScreen extends StatelessWidget {
                               const SizedBox(height: 10),
                               Text(
                                 state.weather ?? "error",
-                                // widget.weatherObj?.weather?[0].description == null
-                                //     ? ''
-                                //     : '${widget.weatherObj!.weather?[0].description}',
                                 style: const TextStyle(
                                     fontSize: 18, color: Colors.white),
                               ),
@@ -146,14 +142,14 @@ class HomeScreen extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              CustomText(content: 'Feels like', size: 15),
+                              const CustomText(content: 'Feels like', size: 15),
                               CustomText(
                                   content: '${state.feelsLike}°C', size: 30),
                             ],
                           ),
                           Column(
                             children: [
-                              CustomText(content: 'Humidity', size: 15),
+                              const CustomText(content: 'Humidity', size: 15),
                               CustomText(
                                   content: '${state.humidity}%', size: 30),
                             ],
@@ -166,7 +162,7 @@ class HomeScreen extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              CustomText(content: 'NNE Wind', size: 15),
+                              const CustomText(content: 'NNE Wind', size: 15),
                               CustomText(
                                   content: state.visibility != null
                                       ? '${(state.visibility! / 1000).toStringAsFixed(0)} km/hr'
@@ -176,7 +172,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                           Column(
                             children: [
-                              CustomText(content: 'Max Temp', size: 15),
+                              const CustomText(content: 'Max Temp', size: 15),
                               CustomText(
                                   content: '${state.maxTemp} °C', size: 20),
                             ],
@@ -189,7 +185,7 @@ class HomeScreen extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              CustomText(content: 'Visibility', size: 15),
+                              const CustomText(content: 'Visibility', size: 15),
                               CustomText(
                                   content: state.visibility != null
                                       ? '${(state.visibility! / 1000).toStringAsFixed(0)} km'
@@ -199,7 +195,8 @@ class HomeScreen extends StatelessWidget {
                           ),
                           Column(
                             children: [
-                              CustomText(content: 'Air pressure', size: 15),
+                              const CustomText(
+                                  content: 'Air pressure', size: 15),
                               CustomText(
                                   content: '${state.pressure} hPa', size: 20),
                             ],

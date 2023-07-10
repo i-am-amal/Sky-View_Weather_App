@@ -1,7 +1,7 @@
 import 'dart:developer';
 
-import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:sky_view_weather_app/core/config/api_endpoints.dart';
 import 'package:sky_view_weather_app/infrastructure/services/search_location.dart';
