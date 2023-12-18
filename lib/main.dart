@@ -14,22 +14,22 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-        providers: [
-          BlocProvider(
-            create: (context) => HomeScreenBloc(),
-          ),
-          BlocProvider(
-            create: (context) => SplashScreenBloc(),
-          ),
-        ],
-        child: MaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'Flutter Demo',
-          theme: ThemeData(
-            primarySwatch: Colors.grey,
-          ),
-          home: const SplashScreen(),
+      providers: [
+        BlocProvider(
+          create: (context) => HomeScreenBloc(),
         ),
-        );
+        BlocProvider(
+          create: (context) => SplashScreenBloc(),
+        ),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.grey,
+        ),
+        home: const SplashScreen(),
+      ),
+    );
   }
 }
