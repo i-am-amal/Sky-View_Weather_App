@@ -1,5 +1,5 @@
 name: sky_view_weather_app
-description: A new Flutter project.
+description: A new Flutter project for checking weather.
 publish_to: 'none' 
 version: 1.0.0+1
 
@@ -25,11 +25,17 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: ^0.13.1
 
+flutter_launcher_icons:
+  android: true
+  image_path: "assets/app_logo.png"
+  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: "assets/app_logo.png"
 flutter:
   uses-material-design: true
 
   assets:
-    - assets/weather app logo.png
+    - assets/weather app logo white.png
     - assets/glass rain.jpg
     - assets/wallpaper snow.jpg

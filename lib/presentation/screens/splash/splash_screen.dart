@@ -9,6 +9,8 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     BlocProvider.of<SplashScreenBloc>(context)
         .add(const SplashScreenEvent.fetchDataEvent());
 
@@ -30,19 +32,28 @@ class SplashScreen extends StatelessWidget {
               width: double.infinity,
               height: double.infinity,
               decoration: const BoxDecoration(
+                color: Colors.white,
                 image: DecorationImage(
-                  fit: BoxFit.cover,
+                  fit: BoxFit.contain,
                   image: AssetImage(kLogoImage),
                 ),
               ),
             ),
-            const Center(
+            Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SizedBox(height: 250),
-                  CircularProgressIndicator(
-                    color: Colors.white70,
+                  SizedBox(height: height * 0.35),
+                  Container(
+                    width: width * 0.6,
+                    height: height * 0.01,
+                    decoration: BoxDecoration(
+                      color: Colors.teal,
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    child: const LinearProgressIndicator(
+                      color: Colors.purple,
+                    ),
                   ),
                 ],
               ),
