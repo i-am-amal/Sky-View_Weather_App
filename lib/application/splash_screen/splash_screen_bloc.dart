@@ -3,7 +3,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sky_view_weather_app/core/config/api_endpoints.dart';
-import '../../infrastructure/services/gps_services.dart';
+import 'package:sky_view_weather_app/infrastructure/services/gps_services.dart';
 
 part 'splash_screen_event.dart';
 part 'splash_screen_state.dart';

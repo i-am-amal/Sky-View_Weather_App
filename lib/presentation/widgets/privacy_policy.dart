@@ -8,9 +8,9 @@ void showPrivacyPolicyDialog(BuildContext context) {
         title: const Text(
           'Privacy Policy',
           style: TextStyle(
-            color: Colors.purple, // Change title color
-            fontSize: 24, // Change title font size
-            fontWeight: FontWeight.bold, // Add bold font weight
+            color: Colors.purple,
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
           ),
         ),
         content: const SingleChildScrollView(
@@ -47,8 +47,8 @@ If you have any questions or concerns about this Privacy Policy or the app's dat
 
 This document was last updated on 20-02-2024.""",
                 style: TextStyle(
-                  color: Colors.black87, // Change content color
-                  fontSize: 14, // Change content font size
+                  color: Colors.black87,
+                  fontSize: 14,
                 ),
               ),
             ],

@@ -1,12 +1,9 @@
-import 'dart:developer';
-
 import 'package:dartz/dartz.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:sky_view_weather_app/core/config/api_endpoints.dart';
+import 'package:sky_view_weather_app/domain/models/response_model/response_model.dart';
+import 'package:sky_view_weather_app/infrastructure/services/api_services.dart';
 import 'package:sky_view_weather_app/infrastructure/services/search_location.dart';
-import '../../domain/models/response_model/response_model.dart';
-import '../../infrastructure/services/api_services.dart';
 
 part 'home_screen_event.dart';
 part 'home_screen_state.dart';
@@ -49,8 +46,6 @@ class HomeScreenBloc extends Bloc<HomeScreenEvent, HomeScreenState> {
       if (event.locationName.isNotEmpty) {
         await CoordinatesFromName.setCoordinates(query: event.locationName);
       }
-
-      log(ApiEndPoints.pathUrl);
 
       emit(state.copyWith(searchVisibility: false));
       add(const FetchHomeDataEvent());

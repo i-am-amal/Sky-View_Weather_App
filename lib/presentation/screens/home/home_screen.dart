@@ -25,10 +25,12 @@ class HomeScreen extends StatelessWidget {
         children: [
           ImageFiltered(
             imageFilter: ImageFilter.blur(sigmaY: 3, sigmaX: 3),
-            child: Image.asset(kHomeImage,
-                fit: BoxFit.cover,
-                width: double.infinity,
-                height: double.infinity),
+            child: Image.asset(
+              kHomeImage,
+              fit: BoxFit.cover,
+              width: double.infinity,
+              height: double.infinity,
+            ),
           ),
           Padding(
             padding: const EdgeInsets.all(20.0),

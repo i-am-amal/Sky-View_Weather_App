@@ -16,7 +16,6 @@ class SplashScreen extends StatelessWidget {
       listener: (context, state) {
         if (state.currentLatitude != null && state.currentLongitude != null) {
           Future.delayed(const Duration(seconds: 3), () {
-            // Navigate to the home screen
             Navigator.pushReplacement(
               context,
               MaterialPageRoute(builder: (context) => const HomeScreen()),
