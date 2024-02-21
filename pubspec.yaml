@@ -1,7 +1,7 @@
 name: sky_view_weather_app
 description: A new Flutter project for checking weather.
 publish_to: 'none'
-version: 1.0.0+1
+version: 1.0.0+3
 
 environment:
   sdk: '>=3.0.5 <4.0.0'

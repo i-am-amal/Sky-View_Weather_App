@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         ],
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'Flutter Demo',
+          title: 'Sky View',
           theme: ThemeData(
             primarySwatch: Colors.grey,
           ),
