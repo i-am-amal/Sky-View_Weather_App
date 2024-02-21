@@ -1,2 +1,2 @@
 const kLogoImage = 'assets/weather app logo white.png';
-const kHomeImage = 'assets/wallpaper snow.jpg';
+const kHomeImage = 'assets/wlp1.jpg';
