@@ -12,7 +12,7 @@ class PermissionHandler extends StatelessWidget {
       future: Geolocator.requestPermission(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return Container(); 
+          return Container();
         } else {
           return child;
         }

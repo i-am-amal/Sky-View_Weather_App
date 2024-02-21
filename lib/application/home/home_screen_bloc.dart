@@ -43,11 +43,6 @@ class HomeScreenBloc extends Bloc<HomeScreenEvent, HomeScreenState> {
     });
 
     on<SearchLocation>((event, emit) async {
-      // if (event.locationName.isNotEmpty) {
-      //   await CoordinatesFromName.setCoordinates(query: event.locationName);
-      // }
-      // emit(state.copyWith(searchVisibility: false));
-      // add(const FetchHomeDataEvent());
       try {
         if (event.locationName.isNotEmpty) {
           await CoordinatesFromName.setCoordinates(query: event.locationName);
@@ -55,7 +50,6 @@ class HomeScreenBloc extends Bloc<HomeScreenEvent, HomeScreenState> {
         emit(state.copyWith(searchVisibility: false));
         add(const FetchHomeDataEvent());
       } catch (e) {
-        // Handle the error here, for example, you can emit an error state
         emit(state.copyWith(
             errorMsg: 'Location not found..please search a valid location'));
       }

@@ -1,12 +1,13 @@
 name: sky_view_weather_app
 description: A new Flutter project for checking weather.
-publish_to: 'none' 
+publish_to: 'none'
 version: 1.0.0+1
 
 environment:
   sdk: '>=3.0.5 <4.0.0'
 
 dependencies:
+  android_intent_plus: ^4.0.3
   build_runner: ^2.4.6
   cupertino_icons: ^1.0.2
   dartz: ^0.10.1
@@ -16,16 +17,16 @@ dependencies:
   flutter_bloc: ^8.1.3
   freezed: ^2.3.5
   freezed_annotation: ^2.2.0
-  geolocator: ^8.2.0
   geocoding: ^2.0.5
+  geolocator: ^8.2.0
   json_annotation: ^4.8.1
   json_serializable: ^6.7.1
 
 dev_dependencies:
+  flutter_launcher_icons: ^0.13.1
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
-  flutter_launcher_icons: ^0.13.1
 
 flutter_launcher_icons:
   android: true
@@ -37,4 +38,3 @@ flutter:
 
   assets:
     - assets/
- 

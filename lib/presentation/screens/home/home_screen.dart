@@ -256,6 +256,7 @@ class HomeScreen extends StatelessWidget {
                                   color: Colors.white,
                                 )),
                           ),
+                          SizedBox(height: height * 0.01),
                         ],
                       );
                     },
