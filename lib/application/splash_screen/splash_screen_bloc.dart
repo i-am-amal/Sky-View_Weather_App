@@ -17,14 +17,14 @@ class SplashScreenBloc extends Bloc<SplashScreenEvent, SplashScreenState> {
 
         results.fold((failure) {
           emit(state.copyWith(errorMsg: failure));
-          emit(state.copyWith(errorMsg: null));
         }, (success) {
           ApiEndPoints.currentLatitude = success.latitude.toString();
           ApiEndPoints.currentLongitude = success.longitude.toString();
 
           emit(state.copyWith(
               currentLatitude: success.latitude,
-              currentLongitude: success.longitude));
+              currentLongitude: success.longitude,
+              errorMsg: null));
         });
       },
     );

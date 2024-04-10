@@ -1,3 +1,4 @@
+
 import 'package:dartz/dartz.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -16,7 +17,6 @@ class HomeScreenBloc extends Bloc<HomeScreenEvent, HomeScreenState> {
 
       result.fold((failureMsg) {
         emit(state.copyWith(errorMsg: failureMsg));
-        emit(state.copyWith(errorMsg: null));
       }, (successResult) {
         String weatherData = successResult.weather?[0].description ?? "error";
         String? weatherName = successResult.name;
@@ -42,12 +42,20 @@ class HomeScreenBloc extends Bloc<HomeScreenEvent, HomeScreenState> {
       emit(state.copyWith(searchVisibility: true));
     });
 
+    on<VisibilityChange>((event, emit) async {
+      emit(state.copyWith(searchVisibility: false));
+    });
+
+    on<ClearMsg>((event, emit) async {
+      emit(state.copyWith(errorMsg: null));
+    });
+
     on<SearchLocation>((event, emit) async {
       try {
         if (event.locationName.isNotEmpty) {
           await CoordinatesFromName.setCoordinates(query: event.locationName);
         }
-        emit(state.copyWith(searchVisibility: false));
+        emit(state.copyWith(searchVisibility: false, errorMsg: null));
         add(const FetchHomeDataEvent());
       } catch (e) {
         emit(state.copyWith(

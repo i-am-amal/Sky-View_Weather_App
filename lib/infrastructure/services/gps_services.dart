@@ -5,6 +5,8 @@ class GpsServices {
   static Future<Either<String, Position>> getLocation() async {
     bool serviceEnabled = await Geolocator.isLocationServiceEnabled();
     if (!serviceEnabled) {
+      await Geolocator.requestPermission();
+      await Geolocator.openLocationSettings();
       return left('Location services are disabled.. turn on location');
     }
 

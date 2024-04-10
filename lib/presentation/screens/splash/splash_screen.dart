@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
+import 'package:sky_view_weather_app/application/home/home_screen_bloc.dart';
 import 'package:sky_view_weather_app/application/splash_screen/splash_screen_bloc.dart';
 import 'package:sky_view_weather_app/core/constants/constants.dart';
+import 'package:sky_view_weather_app/presentation/widgets/error_handling.dart';
 import 'package:sky_view_weather_app/presentation/screens/home/home_screen.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -9,21 +12,27 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
-    
+
     BlocProvider.of<SplashScreenBloc>(context)
         .add(const SplashScreenEvent.fetchDataEvent());
 
     return BlocListener<SplashScreenBloc, SplashScreenState>(
       listener: (context, state) {
         if (state.currentLatitude != null && state.currentLongitude != null) {
-          Future.delayed(const Duration(seconds: 3), () {
+          BlocProvider.of<HomeScreenBloc>(context)
+              .add(const HomeScreenEvent.fetchHomeDataEvent());
+          Future.delayed(const Duration(seconds: 5), () {
             Navigator.pushReplacement(
               context,
               MaterialPageRoute(builder: (context) => const HomeScreen()),
             );
           });
+        } else if (state.errorMsg != null) {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => const ErrorScreen()),
+          );
         }
       },
       child: Scaffold(
@@ -44,16 +53,14 @@ class SplashScreen extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SizedBox(height: height * 0.35),
+                  SizedBox(height: height * 0.36),
                   Container(
-                    width: width * 0.6,
-                    height: height * 0.01,
                     decoration: BoxDecoration(
-                      color: Colors.teal,
                       borderRadius: BorderRadius.circular(5),
                     ),
-                    child: const LinearProgressIndicator(
+                    child: LoadingAnimationWidget.prograssiveDots(
                       color: Colors.purple,
+                      size: 80,
                     ),
                   ),
                 ],

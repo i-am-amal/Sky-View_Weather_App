@@ -5,6 +5,7 @@ void showPrivacyPolicyDialog(BuildContext context) {
     context: context,
     builder: (context) {
       return AlertDialog(
+        backgroundColor: Colors.white70,
         title: const Text(
           'Privacy Policy',
           style: TextStyle(

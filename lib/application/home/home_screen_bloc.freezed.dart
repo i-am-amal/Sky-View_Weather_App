@@ -20,6 +20,8 @@ mixin _$HomeScreenEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() fetchHomeDataEvent,
     required TResult Function() changeVisibility,
+    required TResult Function() visibilityChange,
+    required TResult Function() clearMsg,
     required TResult Function(String locationName) searchLocation,
   }) =>
       throw _privateConstructorUsedError;
@@ -27,6 +29,8 @@ mixin _$HomeScreenEvent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fetchHomeDataEvent,
     TResult? Function()? changeVisibility,
+    TResult? Function()? visibilityChange,
+    TResult? Function()? clearMsg,
     TResult? Function(String locationName)? searchLocation,
   }) =>
       throw _privateConstructorUsedError;
@@ -34,6 +38,8 @@ mixin _$HomeScreenEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fetchHomeDataEvent,
     TResult Function()? changeVisibility,
+    TResult Function()? visibilityChange,
+    TResult Function()? clearMsg,
     TResult Function(String locationName)? searchLocation,
     required TResult orElse(),
   }) =>
@@ -42,6 +48,8 @@ mixin _$HomeScreenEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(FetchHomeDataEvent value) fetchHomeDataEvent,
     required TResult Function(ChangeVisibility value) changeVisibility,
+    required TResult Function(VisibilityChange value) visibilityChange,
+    required TResult Function(ClearMsg value) clearMsg,
     required TResult Function(SearchLocation value) searchLocation,
   }) =>
       throw _privateConstructorUsedError;
@@ -49,6 +57,8 @@ mixin _$HomeScreenEvent {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(FetchHomeDataEvent value)? fetchHomeDataEvent,
     TResult? Function(ChangeVisibility value)? changeVisibility,
+    TResult? Function(VisibilityChange value)? visibilityChange,
+    TResult? Function(ClearMsg value)? clearMsg,
     TResult? Function(SearchLocation value)? searchLocation,
   }) =>
       throw _privateConstructorUsedError;
@@ -56,6 +66,8 @@ mixin _$HomeScreenEvent {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FetchHomeDataEvent value)? fetchHomeDataEvent,
     TResult Function(ChangeVisibility value)? changeVisibility,
+    TResult Function(VisibilityChange value)? visibilityChange,
+    TResult Function(ClearMsg value)? clearMsg,
     TResult Function(SearchLocation value)? searchLocation,
     required TResult orElse(),
   }) =>
@@ -120,6 +132,8 @@ class _$FetchHomeDataEvent implements FetchHomeDataEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() fetchHomeDataEvent,
     required TResult Function() changeVisibility,
+    required TResult Function() visibilityChange,
+    required TResult Function() clearMsg,
     required TResult Function(String locationName) searchLocation,
   }) {
     return fetchHomeDataEvent();
@@ -130,6 +144,8 @@ class _$FetchHomeDataEvent implements FetchHomeDataEvent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fetchHomeDataEvent,
     TResult? Function()? changeVisibility,
+    TResult? Function()? visibilityChange,
+    TResult? Function()? clearMsg,
     TResult? Function(String locationName)? searchLocation,
   }) {
     return fetchHomeDataEvent?.call();
@@ -140,6 +156,8 @@ class _$FetchHomeDataEvent implements FetchHomeDataEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fetchHomeDataEvent,
     TResult Function()? changeVisibility,
+    TResult Function()? visibilityChange,
+    TResult Function()? clearMsg,
     TResult Function(String locationName)? searchLocation,
     required TResult orElse(),
   }) {
@@ -154,6 +172,8 @@ class _$FetchHomeDataEvent implements FetchHomeDataEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(FetchHomeDataEvent value) fetchHomeDataEvent,
     required TResult Function(ChangeVisibility value) changeVisibility,
+    required TResult Function(VisibilityChange value) visibilityChange,
+    required TResult Function(ClearMsg value) clearMsg,
     required TResult Function(SearchLocation value) searchLocation,
   }) {
     return fetchHomeDataEvent(this);
@@ -164,6 +184,8 @@ class _$FetchHomeDataEvent implements FetchHomeDataEvent {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(FetchHomeDataEvent value)? fetchHomeDataEvent,
     TResult? Function(ChangeVisibility value)? changeVisibility,
+    TResult? Function(VisibilityChange value)? visibilityChange,
+    TResult? Function(ClearMsg value)? clearMsg,
     TResult? Function(SearchLocation value)? searchLocation,
   }) {
     return fetchHomeDataEvent?.call(this);
@@ -174,6 +196,8 @@ class _$FetchHomeDataEvent implements FetchHomeDataEvent {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FetchHomeDataEvent value)? fetchHomeDataEvent,
     TResult Function(ChangeVisibility value)? changeVisibility,
+    TResult Function(VisibilityChange value)? visibilityChange,
+    TResult Function(ClearMsg value)? clearMsg,
     TResult Function(SearchLocation value)? searchLocation,
     required TResult orElse(),
   }) {
@@ -228,6 +252,8 @@ class _$ChangeVisibility implements ChangeVisibility {
   TResult when<TResult extends Object?>({
     required TResult Function() fetchHomeDataEvent,
     required TResult Function() changeVisibility,
+    required TResult Function() visibilityChange,
+    required TResult Function() clearMsg,
     required TResult Function(String locationName) searchLocation,
   }) {
     return changeVisibility();
@@ -238,6 +264,8 @@ class _$ChangeVisibility implements ChangeVisibility {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fetchHomeDataEvent,
     TResult? Function()? changeVisibility,
+    TResult? Function()? visibilityChange,
+    TResult? Function()? clearMsg,
     TResult? Function(String locationName)? searchLocation,
   }) {
     return changeVisibility?.call();
@@ -248,6 +276,8 @@ class _$ChangeVisibility implements ChangeVisibility {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fetchHomeDataEvent,
     TResult Function()? changeVisibility,
+    TResult Function()? visibilityChange,
+    TResult Function()? clearMsg,
     TResult Function(String locationName)? searchLocation,
     required TResult orElse(),
   }) {
@@ -262,6 +292,8 @@ class _$ChangeVisibility implements ChangeVisibility {
   TResult map<TResult extends Object?>({
     required TResult Function(FetchHomeDataEvent value) fetchHomeDataEvent,
     required TResult Function(ChangeVisibility value) changeVisibility,
+    required TResult Function(VisibilityChange value) visibilityChange,
+    required TResult Function(ClearMsg value) clearMsg,
     required TResult Function(SearchLocation value) searchLocation,
   }) {
     return changeVisibility(this);
@@ -272,6 +304,8 @@ class _$ChangeVisibility implements ChangeVisibility {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(FetchHomeDataEvent value)? fetchHomeDataEvent,
     TResult? Function(ChangeVisibility value)? changeVisibility,
+    TResult? Function(VisibilityChange value)? visibilityChange,
+    TResult? Function(ClearMsg value)? clearMsg,
     TResult? Function(SearchLocation value)? searchLocation,
   }) {
     return changeVisibility?.call(this);
@@ -282,6 +316,8 @@ class _$ChangeVisibility implements ChangeVisibility {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FetchHomeDataEvent value)? fetchHomeDataEvent,
     TResult Function(ChangeVisibility value)? changeVisibility,
+    TResult Function(VisibilityChange value)? visibilityChange,
+    TResult Function(ClearMsg value)? clearMsg,
     TResult Function(SearchLocation value)? searchLocation,
     required TResult orElse(),
   }) {
@@ -294,6 +330,245 @@ class _$ChangeVisibility implements ChangeVisibility {
 
 abstract class ChangeVisibility implements HomeScreenEvent {
   const factory ChangeVisibility() = _$ChangeVisibility;
+}
+
+/// @nodoc
+abstract class _$$VisibilityChangeCopyWith<$Res> {
+  factory _$$VisibilityChangeCopyWith(
+          _$VisibilityChange value, $Res Function(_$VisibilityChange) then) =
+      __$$VisibilityChangeCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$VisibilityChangeCopyWithImpl<$Res>
+    extends _$HomeScreenEventCopyWithImpl<$Res, _$VisibilityChange>
+    implements _$$VisibilityChangeCopyWith<$Res> {
+  __$$VisibilityChangeCopyWithImpl(
+      _$VisibilityChange _value, $Res Function(_$VisibilityChange) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$VisibilityChange implements VisibilityChange {
+  const _$VisibilityChange();
+
+  @override
+  String toString() {
+    return 'HomeScreenEvent.visibilityChange()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$VisibilityChange);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() fetchHomeDataEvent,
+    required TResult Function() changeVisibility,
+    required TResult Function() visibilityChange,
+    required TResult Function() clearMsg,
+    required TResult Function(String locationName) searchLocation,
+  }) {
+    return visibilityChange();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchHomeDataEvent,
+    TResult? Function()? changeVisibility,
+    TResult? Function()? visibilityChange,
+    TResult? Function()? clearMsg,
+    TResult? Function(String locationName)? searchLocation,
+  }) {
+    return visibilityChange?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchHomeDataEvent,
+    TResult Function()? changeVisibility,
+    TResult Function()? visibilityChange,
+    TResult Function()? clearMsg,
+    TResult Function(String locationName)? searchLocation,
+    required TResult orElse(),
+  }) {
+    if (visibilityChange != null) {
+      return visibilityChange();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(FetchHomeDataEvent value) fetchHomeDataEvent,
+    required TResult Function(ChangeVisibility value) changeVisibility,
+    required TResult Function(VisibilityChange value) visibilityChange,
+    required TResult Function(ClearMsg value) clearMsg,
+    required TResult Function(SearchLocation value) searchLocation,
+  }) {
+    return visibilityChange(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(FetchHomeDataEvent value)? fetchHomeDataEvent,
+    TResult? Function(ChangeVisibility value)? changeVisibility,
+    TResult? Function(VisibilityChange value)? visibilityChange,
+    TResult? Function(ClearMsg value)? clearMsg,
+    TResult? Function(SearchLocation value)? searchLocation,
+  }) {
+    return visibilityChange?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(FetchHomeDataEvent value)? fetchHomeDataEvent,
+    TResult Function(ChangeVisibility value)? changeVisibility,
+    TResult Function(VisibilityChange value)? visibilityChange,
+    TResult Function(ClearMsg value)? clearMsg,
+    TResult Function(SearchLocation value)? searchLocation,
+    required TResult orElse(),
+  }) {
+    if (visibilityChange != null) {
+      return visibilityChange(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class VisibilityChange implements HomeScreenEvent {
+  const factory VisibilityChange() = _$VisibilityChange;
+}
+
+/// @nodoc
+abstract class _$$ClearMsgCopyWith<$Res> {
+  factory _$$ClearMsgCopyWith(
+          _$ClearMsg value, $Res Function(_$ClearMsg) then) =
+      __$$ClearMsgCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ClearMsgCopyWithImpl<$Res>
+    extends _$HomeScreenEventCopyWithImpl<$Res, _$ClearMsg>
+    implements _$$ClearMsgCopyWith<$Res> {
+  __$$ClearMsgCopyWithImpl(_$ClearMsg _value, $Res Function(_$ClearMsg) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ClearMsg implements ClearMsg {
+  const _$ClearMsg();
+
+  @override
+  String toString() {
+    return 'HomeScreenEvent.clearMsg()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$ClearMsg);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() fetchHomeDataEvent,
+    required TResult Function() changeVisibility,
+    required TResult Function() visibilityChange,
+    required TResult Function() clearMsg,
+    required TResult Function(String locationName) searchLocation,
+  }) {
+    return clearMsg();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchHomeDataEvent,
+    TResult? Function()? changeVisibility,
+    TResult? Function()? visibilityChange,
+    TResult? Function()? clearMsg,
+    TResult? Function(String locationName)? searchLocation,
+  }) {
+    return clearMsg?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchHomeDataEvent,
+    TResult Function()? changeVisibility,
+    TResult Function()? visibilityChange,
+    TResult Function()? clearMsg,
+    TResult Function(String locationName)? searchLocation,
+    required TResult orElse(),
+  }) {
+    if (clearMsg != null) {
+      return clearMsg();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(FetchHomeDataEvent value) fetchHomeDataEvent,
+    required TResult Function(ChangeVisibility value) changeVisibility,
+    required TResult Function(VisibilityChange value) visibilityChange,
+    required TResult Function(ClearMsg value) clearMsg,
+    required TResult Function(SearchLocation value) searchLocation,
+  }) {
+    return clearMsg(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(FetchHomeDataEvent value)? fetchHomeDataEvent,
+    TResult? Function(ChangeVisibility value)? changeVisibility,
+    TResult? Function(VisibilityChange value)? visibilityChange,
+    TResult? Function(ClearMsg value)? clearMsg,
+    TResult? Function(SearchLocation value)? searchLocation,
+  }) {
+    return clearMsg?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(FetchHomeDataEvent value)? fetchHomeDataEvent,
+    TResult Function(ChangeVisibility value)? changeVisibility,
+    TResult Function(VisibilityChange value)? visibilityChange,
+    TResult Function(ClearMsg value)? clearMsg,
+    TResult Function(SearchLocation value)? searchLocation,
+    required TResult orElse(),
+  }) {
+    if (clearMsg != null) {
+      return clearMsg(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ClearMsg implements HomeScreenEvent {
+  const factory ClearMsg() = _$ClearMsg;
 }
 
 /// @nodoc
@@ -363,6 +638,8 @@ class _$SearchLocation implements SearchLocation {
   TResult when<TResult extends Object?>({
     required TResult Function() fetchHomeDataEvent,
     required TResult Function() changeVisibility,
+    required TResult Function() visibilityChange,
+    required TResult Function() clearMsg,
     required TResult Function(String locationName) searchLocation,
   }) {
     return searchLocation(locationName);
@@ -373,6 +650,8 @@ class _$SearchLocation implements SearchLocation {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fetchHomeDataEvent,
     TResult? Function()? changeVisibility,
+    TResult? Function()? visibilityChange,
+    TResult? Function()? clearMsg,
     TResult? Function(String locationName)? searchLocation,
   }) {
     return searchLocation?.call(locationName);
@@ -383,6 +662,8 @@ class _$SearchLocation implements SearchLocation {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fetchHomeDataEvent,
     TResult Function()? changeVisibility,
+    TResult Function()? visibilityChange,
+    TResult Function()? clearMsg,
     TResult Function(String locationName)? searchLocation,
     required TResult orElse(),
   }) {
@@ -397,6 +678,8 @@ class _$SearchLocation implements SearchLocation {
   TResult map<TResult extends Object?>({
     required TResult Function(FetchHomeDataEvent value) fetchHomeDataEvent,
     required TResult Function(ChangeVisibility value) changeVisibility,
+    required TResult Function(VisibilityChange value) visibilityChange,
+    required TResult Function(ClearMsg value) clearMsg,
     required TResult Function(SearchLocation value) searchLocation,
   }) {
     return searchLocation(this);
@@ -407,6 +690,8 @@ class _$SearchLocation implements SearchLocation {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(FetchHomeDataEvent value)? fetchHomeDataEvent,
     TResult? Function(ChangeVisibility value)? changeVisibility,
+    TResult? Function(VisibilityChange value)? visibilityChange,
+    TResult? Function(ClearMsg value)? clearMsg,
     TResult? Function(SearchLocation value)? searchLocation,
   }) {
     return searchLocation?.call(this);
@@ -417,6 +702,8 @@ class _$SearchLocation implements SearchLocation {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FetchHomeDataEvent value)? fetchHomeDataEvent,
     TResult Function(ChangeVisibility value)? changeVisibility,
+    TResult Function(VisibilityChange value)? visibilityChange,
+    TResult Function(ClearMsg value)? clearMsg,
     TResult Function(SearchLocation value)? searchLocation,
     required TResult orElse(),
   }) {
